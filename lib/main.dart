@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:bento_challenge/bento_colors.dart';
 
+import 'package:bento_challenge/ui/bento_custom/color.dart';
 import 'package:bento_challenge/ui/splash_page.dart';
-import 'package:bento_challenge/ui/home_page.dart';
-import 'package:bento_challenge/ui/item_detail_page.dart';
+import 'package:bento_challenge/ui/home/home_page.dart';
+import 'package:bento_challenge/ui/item_detail/item_detail_page.dart';
 
 void main() {
   runApp(const BentoChallenge());
@@ -18,9 +18,10 @@ class BentoChallenge extends StatelessWidget {
       title: 'Bento Challenge',
       initialRoute: HomePage.routeName,
       theme: ThemeData(
-        fontFamily: '',
-        primaryColor: BentoColors.primary,
+        fontFamily: 'NunitoSans',
+        primaryColor: BentoColor.primary,
         useMaterial3: true,
+        scaffoldBackgroundColor: const Color(0xFFFFFFFF),
       ),
       routes: {
         SplashPage.routeName: (_) => const SplashPage(),
