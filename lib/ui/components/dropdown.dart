@@ -39,12 +39,12 @@ class _BentoDropdownState extends State<BentoDropdown> {
             color: BentoColor.secondary.withOpacity(0.8),
             fontWeight: FontWeight.w500,
           ),
-          hintStyle: TextStyle(
-            fontSize: 15,
-            color: BentoColor.secondary,
-          ),
           searchFieldDecoration: SearchFieldDecoration(
             textStyle: TextStyle(color: BentoColor.secondary),
+            hintStyle: TextStyle(
+              fontSize: 15,
+              color: BentoColor.secondary,
+            ),
             contentPadding: const EdgeInsets.all(0),
             constraints: const BoxConstraints(maxHeight: 40),
           ),
