@@ -13,15 +13,16 @@ class BentoDropdown extends StatefulWidget {
 
 class _BentoDropdownState extends State<BentoDropdown> {
   final dropdownController = SingleSelectController('Bacangan, Sambit');
-  List<String> data = [
+
+  List<String> cities = [
     'Bacangan, Sambit',
     'Brazil, SP - Patriarca',
     'Caribe, Cayman island',
   ];
 
-  Future<List<String>> getFakeRequestData(String filter) async {
-    return data.where((e) {
-      return e.toLowerCase().contains(filter.toLowerCase());
+  Future<List<String>> fakeSearchFilter(String filter) async {
+    return cities.where((city) {
+      return city.toLowerCase().contains(filter.toLowerCase());
     }).toList();
   }
 
@@ -38,31 +39,40 @@ class _BentoDropdownState extends State<BentoDropdown> {
             color: BentoColor.secondary.withOpacity(0.8),
             fontWeight: FontWeight.w500,
           ),
+          hintStyle: TextStyle(
+            fontSize: 15,
+            color: BentoColor.secondary,
+          ),
+          searchFieldDecoration: SearchFieldDecoration(
+            textStyle: TextStyle(color: BentoColor.secondary),
+            contentPadding: const EdgeInsets.all(0),
+            constraints: const BoxConstraints(maxHeight: 40),
+          ),
+          noResultFoundStyle: TextStyle(
+            fontSize: 15,
+            color: BentoColor.secondary.withOpacity(0.8),
+            fontWeight: FontWeight.w600,
+          ),
           listItemStyle: TextStyle(
             fontSize: 15,
             color: BentoColor.secondary.withOpacity(0.8),
             fontWeight: FontWeight.w600,
           ),
-          searchFieldDecoration: SearchFieldDecoration(
-            textStyle: TextStyle(color: BentoColor.secondary),
-            hintStyle: TextStyle(
-              fontSize: 15,
-              color: BentoColor.secondary,
-            ),
-            contentPadding: const EdgeInsets.all(0),
-            constraints: const BoxConstraints(maxHeight: 40),
+          listItemDecoration: ListItemDecoration(
+            selectedColor: BentoColor.secondary.withOpacity(0.1),
+            highlightColor: BentoColor.secondary.withOpacity(0.1),
           ),
         ),
+        items: cities,
         searchHintText: 'Search',
-        noResultFoundText: 'Not found your city',
+        noResultFoundText: 'City ​​not found',
+        searchRequestLoadingIndicator: WaveLoading(),
         hideSelectedFieldWhenExpanded: true,
         closedHeaderPadding: const EdgeInsets.all(0),
-        items: data,
-        searchRequestLoadingIndicator: WaveLoading(),
         excludeSelected: false,
-        futureRequest: getFakeRequestData,
         controller: dropdownController,
-        futureRequestDelay: const Duration(milliseconds: 2500),
+        futureRequest: fakeSearchFilter,
+        futureRequestDelay: const Duration(milliseconds: 1700),
         onChanged: (String? string) {},
       ),
     );
