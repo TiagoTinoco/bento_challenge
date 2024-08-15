@@ -11,8 +11,8 @@ dependencies:
   flutter:
     sdk: flutter
   animated_custom_dropdown: ^3.1.1
-  cupertino_icons: ^1.0.8
   awesome_bottom_bar: ^1.2.4
+  cupertino_icons: ^1.0.8
 
 dev_dependencies:
   flutter_test:
@@ -25,6 +25,9 @@ flutter:
     - assets/
     - assets/fonts/
     - assets/images/
+    - assets/images/button/
+    - assets/images/carousel/
+    - assets/images/categories/
   fonts:
     - family: NunitoSans
       fonts:

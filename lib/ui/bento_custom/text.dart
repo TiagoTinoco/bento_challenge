@@ -3,7 +3,7 @@ import 'package:flutter/widgets.dart';
 class BentoTextStyles {
   static const TextStyle captionDF = TextStyle(fontSize: 15, height: 1.25, letterSpacing: 0.4);
   static const TextStyle bodyDF = TextStyle(fontSize: 18, height: 1.5, letterSpacing: 0);
-  static const TextStyle subtitle = TextStyle(fontSize: 22, height: 1.25, letterSpacing: 0);
+  static const TextStyle subtitle = TextStyle(fontSize: 20, height: 1.25, letterSpacing: 0);
   static const TextStyle title = TextStyle(fontSize: 28, height: 1.25, letterSpacing: 0);
 }
 

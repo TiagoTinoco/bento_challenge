@@ -17,5 +17,6 @@ abstract class BentoColor {
   static MaterialColor primary = MaterialColor(0xFF51E09B, _swatchOpacity);
   static Color secondary = const Color(0xFF0F325A);
   static Color darkGreen = const Color(0xFFAAD4C3);
+  static Color beige = const Color(0xFFF0F5DC);
   static Color yellow = const Color(0xFFFABE1F);
 }
