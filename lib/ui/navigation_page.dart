@@ -105,10 +105,7 @@ class _NavigationPageState extends State<NavigationPage> with SingleTickerProvid
             ],
           ),
           SliverToBoxAdapter(
-            child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: BentoSpacing.xs),
-              child: pages[_tabController!.index],
-            ),
+            child: pages[_tabController!.index],
           ),
         ],
       ),
