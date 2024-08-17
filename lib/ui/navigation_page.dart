@@ -34,25 +34,11 @@ class _NavigationPageState extends State<NavigationPage> with SingleTickerProvid
   ];
 
   List<TabItem> iconsPage = <TabItem>[
-    TabItem(
-      icon: Icons.home_rounded,
-      title: 'Home',
-    ),
-    TabItem(
-      icon: Icons.local_offer_rounded,
-      title: 'Deals',
-    ),
-    TabItem(
-      icon: Icons.store_rounded,
-    ),
-    TabItem(
-      icon: Icons.shopping_bag_rounded,
-      title: 'Cart',
-    ),
-    TabItem(
-      icon: Icons.person,
-      title: 'Account',
-    ),
+    TabItem(icon: Icons.home_rounded, title: 'Home'),
+    TabItem(icon: Icons.local_offer_rounded, title: 'Deals'),
+    TabItem(icon: Icons.store_rounded),
+    TabItem(icon: Icons.shopping_bag_rounded, title: 'Cart'),
+    TabItem(icon: Icons.person, title: 'Account'),
   ];
 
   @override
@@ -78,7 +64,7 @@ class _NavigationPageState extends State<NavigationPage> with SingleTickerProvid
         slivers: [
           SliverAppBar(
             titleSpacing: BentoSpacing.xs,
-            toolbarHeight: 110,
+            toolbarHeight: 100,
             backgroundColor: const Color(0xFFFFFFFF),
             automaticallyImplyLeading: false,
             title: Column(
@@ -97,10 +83,7 @@ class _NavigationPageState extends State<NavigationPage> with SingleTickerProvid
             actions: [
               BentoAvatar(
                 imagePath: 'profile.png',
-                onPressed: () {
-                  // TODO(tiago-tinoco): Should take the profile page
-                  // onPressed: () => Navigator.of(context).pushNamed('/profile'),
-                },
+                onPressed: () {},
               ),
             ],
           ),
@@ -131,9 +114,7 @@ class _NavigationPageState extends State<NavigationPage> with SingleTickerProvid
           color: BentoColor.secondary,
           background: BentoColor.secondary,
         ),
-        onTap: (int index) => setState(() {
-          _tabController!.index = index;
-        }),
+        onTap: (int index) => setState(() => _tabController!.index = index),
       ),
     );
   }
