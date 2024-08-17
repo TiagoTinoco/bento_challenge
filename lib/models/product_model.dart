@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 import 'package:bento_challenge/models/specification_model.dart';
 
 class ProductModel {
@@ -9,6 +11,7 @@ class ProductModel {
   final double price;
   final double? discount;
   final double stars;
+  final Color backgroundColor;
   final List<String> imagesPath;
   final List<SpecificationModel> specifications;
 
@@ -21,6 +24,7 @@ class ProductModel {
     required this.price,
     required this.discount,
     required this.stars,
+    required this.backgroundColor,
     required this.imagesPath,
     required this.specifications,
   });
