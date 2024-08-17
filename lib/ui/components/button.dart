@@ -9,36 +9,39 @@ class BentoButton extends StatelessWidget {
     required this.title,
     this.height = 45,
     this.width = double.maxFinite,
-    required this.invertBackgroundColor,
+    this.borderRadius = 90,
+    this.fontsize = 14,
+    this.invertBackgroundColor = false,
     required this.onPressed,
   });
 
   final String title;
   final double? height;
   final double? width;
-  final bool invertBackgroundColor;
+  final double? borderRadius;
+  final double? fontsize;
+  final bool? invertBackgroundColor;
   final VoidCallback onPressed;
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: width,
-      height: height,
-      child: TextButton(
-        onPressed: onPressed,
-        style: TextButton.styleFrom(
-          alignment: Alignment.center,
-          padding: EdgeInsets.symmetric(
-            vertical: 6,
-            horizontal: 18,
-          ),
-          backgroundColor: !invertBackgroundColor ? BentoColor.primary : BentoColor.secondary,
+    return GestureDetector(
+      onTap: onPressed,
+      child: Container(
+        width: width,
+        height: height,
+        decoration: BoxDecoration(
+          color: !invertBackgroundColor! ? BentoColor.primary : BentoColor.secondary,
+          borderRadius: BorderRadius.circular(borderRadius!),
         ),
-        child: BentoTextCaptionDF(
-          title,
-          style: TextStyle(
-            color: !invertBackgroundColor ? BentoColor.secondary : BentoColor.primary,
-            fontWeight: FontWeight.w700,
+        child: Center(
+          child: BentoTextCaptionDF(
+            title,
+            style: TextStyle(
+              fontSize: fontsize,
+              color: !invertBackgroundColor! ? BentoColor.secondary : BentoColor.primary,
+              fontWeight: FontWeight.w700,
+            ),
           ),
         ),
       ),
