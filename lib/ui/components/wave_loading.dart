@@ -61,9 +61,9 @@ class _WaveLoadingState extends State<WaveLoading> with SingleTickerProviderStat
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            WaveDot(animation: _animationFirstDot),
-            WaveDot(animation: _animationSecondDot),
-            WaveDot(animation: _animationThirdDot),
+            _WaveDot(animation: _animationFirstDot),
+            _WaveDot(animation: _animationSecondDot),
+            _WaveDot(animation: _animationThirdDot),
           ],
         ),
       ),
@@ -71,11 +71,8 @@ class _WaveLoadingState extends State<WaveLoading> with SingleTickerProviderStat
   }
 }
 
-class WaveDot extends AnimatedWidget {
-  const WaveDot({
-    super.key,
-    required Animation<double> animation,
-  }) : super(listenable: animation);
+class _WaveDot extends AnimatedWidget {
+  const _WaveDot({required Animation<double> animation}) : super(listenable: animation);
 
   @override
   Widget build(BuildContext context) {
