@@ -14,7 +14,8 @@ Map<int, Color> _swatchOpacity = {
 };
 
 abstract class BentoColor {
-  static MaterialColor primary = MaterialColor(0xFF50E19B, _swatchOpacity);
+  static MaterialColor primary = MaterialColor(0xFF51E09B, _swatchOpacity);
   static Color secondary = const Color(0xFF0F325A);
-  static Color star = const Color(0xFFFABE1F);
+  static Color darkGreen = const Color(0xFFAAD4C3);
+  static Color yellow = const Color(0xFFFABE1F);
 }

@@ -1,16 +1,14 @@
 import 'package:flutter/material.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
-
-  static const routeName = '/home';
+class DealsPage extends StatelessWidget {
+  const DealsPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       width: double.maxFinite,
       height: 100,
-      color: Colors.red,
+      color: Colors.blue,
     );
   }
 }

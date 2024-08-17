@@ -5,8 +5,8 @@ abstract class BentoSpacing {
   /// The extra-extra small spacing value.
   static double xxs = 8.0;
 
-  /// The extra-extra small spacing value.
-  static double xs = 16.0;
+  /// The extra small spacing value.
+  static double xs = 18.0;
 
   /// The small spacing value.
   static double sm = 24.0;
