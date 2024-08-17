@@ -1,62 +1,155 @@
+import 'package:flutter/material.dart';
+import 'package:shimmer/shimmer.dart';
+
 import 'package:bento_challenge/ui/bento_custom/color.dart';
 import 'package:bento_challenge/ui/bento_custom/spacing.dart';
 import 'package:bento_challenge/ui/bento_custom/text.dart';
-import 'package:flutter/material.dart';
+
+import 'package:bento_challenge/ui/components/button.dart';
+import 'package:bento_challenge/ui/components/price.dart';
 
 class BentoProductCard extends StatelessWidget {
-  const BentoProductCard({super.key});
+  const BentoProductCard({
+    super.key,
+    required this.title,
+    required this.imagePath,
+    required this.price,
+    required this.stars,
+    required this.onPressed,
+    this.discount = 0,
+    this.backgroundColor = const Color(0xFFF5F5F5),
+  });
+
+  final String title;
+  final String imagePath;
+  final double price;
+  final double? discount;
+  final double stars;
+  final Color? backgroundColor;
+  final VoidCallback onPressed;
 
   @override
   Widget build(BuildContext context) {
-    double widthScreen = MediaQuery.sizeOf(context).width;
-
     return Container(
-      width: widthScreen * 0.45,
+      width: double.maxFinite,
+      padding: EdgeInsets.all(8),
       decoration: BoxDecoration(
-        color: Color(0xFFFAF0DC),
+        color: backgroundColor,
         borderRadius: BorderRadius.circular(10),
       ),
-      child: Padding(
-        padding: const EdgeInsets.all(8),
-        child: Column(
-          children: [
-            Row(
-              crossAxisAlignment: CrossAxisAlignment.end,
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                Icon(
-                  Icons.star_rate_rounded,
-                  color: BentoColor.yellow,
-                  size: 16,
+      child: Column(
+        children: [
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.end,
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Icon(
+                Icons.star_rate_rounded,
+                color: BentoColor.yellow,
+                size: 16,
+              ),
+              SizedBox(width: 2),
+              BentoTextCaptionDF(
+                '$stars',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 12,
+                  color: BentoColor.secondary,
+                  fontWeight: FontWeight.w600,
                 ),
-                SizedBox(width: 2),
+              ),
+            ],
+          ),
+          Image.asset(
+            'assets/images/products/$imagePath',
+            fit: BoxFit.contain,
+            width: 120,
+            height: 120,
+          ),
+          SizedBox(height: BentoSpacing.xxs),
+          Container(
+            width: double.maxFinite,
+            padding: EdgeInsets.all(8),
+            decoration: BoxDecoration(
+              color: Color(0xFFFFFFFF),
+              borderRadius: BorderRadius.circular(10),
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
                 BentoTextCaptionDF(
-                  '4.5',
-                  textAlign: TextAlign.center,
+                  title,
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
                   style: TextStyle(
-                    fontSize: 12,
                     color: BentoColor.secondary,
-                    fontWeight: FontWeight.w600,
+                    fontWeight: FontWeight.w700,
                   ),
+                ),
+                SizedBox(height: BentoSpacing.xxxs),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    BentoPrice(
+                      price: price,
+                      discount: discount!,
+                    ),
+                    Spacer(),
+                    BentoButton(
+                      title: 'See',
+                      width: 65,
+                      height: 30,
+                      borderRadius: 10,
+                      onPressed: onPressed,
+                    ),
+                  ],
                 ),
               ],
             ),
-            Image.asset(
-              'assets/images/products/orange.png',
-              fit: BoxFit.contain,
-              width: 120,
-              height: 120,
-            ),
-            SizedBox(height: BentoSpacing.sm),
-            Container(
-              height: 40,
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class BentoProductCardSkeleton extends StatelessWidget {
+  const BentoProductCardSkeleton({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(top: 25),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Shimmer.fromColors(
+            baseColor: Color(0xFFF5F5F5),
+            highlightColor: Colors.white,
+            child: Container(
+              width: 183,
+              height: 263,
+              padding: EdgeInsets.all(10),
               decoration: BoxDecoration(
-                color: Color(0xFFF7F7F9),
+                color: Color(0xFFF5F5F5),
                 borderRadius: BorderRadius.circular(10),
               ),
             ),
-          ],
-        ),
+          ),
+          Shimmer.fromColors(
+            baseColor: Color(0xFFF5F5F5),
+            highlightColor: Colors.white,
+            child: Container(
+              width: 183,
+              height: 263,
+              padding: EdgeInsets.all(10),
+              decoration: BoxDecoration(
+                color: Color(0xFFF5F5F5),
+                borderRadius: BorderRadius.circular(10),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
