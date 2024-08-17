@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class CarouselItem {
-  CarouselItem({
+class CarouselBannerItem {
+  CarouselBannerItem({
     required this.title,
     required this.subtitle,
     required this.buttonTitle,

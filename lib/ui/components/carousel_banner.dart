@@ -1,31 +1,29 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 
 import 'package:bento_challenge/ui/bento_custom/color.dart';
 import 'package:bento_challenge/ui/bento_custom/spacing.dart';
 import 'package:bento_challenge/ui/bento_custom/text.dart';
 
-import 'package:bento_challenge/models/carousel_item.dart';
-
+import 'package:bento_challenge/ui/components/models/carousel_banner_item.dart';
 import 'package:bento_challenge/ui/components/button.dart';
 
-class BentoCarousel extends StatefulWidget {
-  const BentoCarousel({
+class BentoCarouselBanner extends StatefulWidget {
+  const BentoCarouselBanner({
     super.key,
     required this.pages,
   });
 
-  final List<CarouselItem> pages;
+  final List<CarouselBannerItem> pages;
 
   @override
-  State<BentoCarousel> createState() => _BentoCarouselState();
+  State<BentoCarouselBanner> createState() => _BentoCarouselBannerState();
 }
 
-class _BentoCarouselState extends State<BentoCarousel> {
+class _BentoCarouselBannerState extends State<BentoCarouselBanner> {
   final PageController _pageController = PageController();
   late Timer _timer;
-  late List<CarouselItem> pages = widget.pages;
+  late List<CarouselBannerItem> pages = widget.pages;
 
   int _currentPage = 0;
 
@@ -56,7 +54,7 @@ class _BentoCarouselState extends State<BentoCarousel> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 180,
+      height: 200,
       child: Column(
         children: [
           Expanded(
@@ -90,17 +88,17 @@ class _BentoCarouselState extends State<BentoCarousel> {
                                   fontWeight: FontWeight.w600,
                                 ),
                               ),
-                              SizedBox(height: BentoSpacing.xxxxs),
+                              SizedBox(height: BentoSpacing.xxxs),
                               BentoTextSubtitle(
                                 pages[index].title,
                                 maxLines: 2,
                                 overflow: TextOverflow.ellipsis,
                                 style: TextStyle(
                                   color: BentoColor.secondary,
-                                  fontWeight: FontWeight.bold,
+                                  fontWeight: FontWeight.w900,
                                 ),
                               ),
-                              SizedBox(height: BentoSpacing.xxxs),
+                              SizedBox(height: BentoSpacing.xxs),
                               BentoButton(
                                 title: pages[index].buttonTitle,
                                 invertBackgroundColor: pages[index].invertBackgroundColorButton,
