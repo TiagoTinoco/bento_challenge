@@ -12,8 +12,8 @@ import 'package:bento_challenge/ui/components/price.dart';
 import 'package:bento_challenge/ui/components/specifications.dart';
 import 'package:bento_challenge/ui/components/carousel_product.dart';
 
-import 'package:bento_challenge/models/product_model.dart';
 import 'package:bento_challenge/controller/products_controller.dart';
+import 'package:bento_challenge/models/product_model.dart';
 
 class ProductDetailPage extends StatefulWidget {
   const ProductDetailPage({super.key});

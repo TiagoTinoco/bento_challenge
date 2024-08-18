@@ -1,5 +1,6 @@
 import 'package:flutter/widgets.dart';
 
+/// custom text class
 class BentoTextStyles {
   static const TextStyle captionDF = TextStyle(fontSize: 14, height: 1.25, letterSpacing: 0.0);
   static const TextStyle bodyDF = TextStyle(fontSize: 16, height: 1.5, letterSpacing: 0.0);

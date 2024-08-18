@@ -1,7 +1,7 @@
-import 'package:bento_challenge/ui/bento_custom/spacing.dart';
 import 'package:flutter/material.dart';
 
 import 'package:bento_challenge/ui/bento_custom/color.dart';
+import 'package:bento_challenge/ui/bento_custom/spacing.dart';
 
 class BentoCarouselProduct extends StatefulWidget {
   const BentoCarouselProduct({

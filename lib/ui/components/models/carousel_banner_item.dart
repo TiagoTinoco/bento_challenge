@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// this item was created for use with CarouselBanner()
 class CarouselBannerItem {
   CarouselBannerItem({
     required this.title,

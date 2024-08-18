@@ -8,10 +8,10 @@ import 'package:bento_challenge/ui/bento_custom/text.dart';
 
 import 'package:bento_challenge/ui/components/avatar.dart';
 import 'package:bento_challenge/ui/components/dropdown.dart';
-import 'package:bento_challenge/ui/home_page.dart';
 import 'package:bento_challenge/ui/others/account_page.dart';
 import 'package:bento_challenge/ui/others/cart_page.dart';
 import 'package:bento_challenge/ui/others/deals_page.dart';
+import 'package:bento_challenge/ui/home_page.dart';
 
 class NavigationPage extends StatefulWidget {
   const NavigationPage({super.key});

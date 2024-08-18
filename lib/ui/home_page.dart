@@ -1,4 +1,3 @@
-import 'package:bento_challenge/ui/product_detail_page.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -6,17 +5,18 @@ import 'package:bento_challenge/ui/bento_custom/text.dart';
 import 'package:bento_challenge/ui/bento_custom/color.dart';
 import 'package:bento_challenge/ui/bento_custom/spacing.dart';
 
-import 'package:bento_challenge/models/category_model.dart';
-import 'package:bento_challenge/models/product_model.dart';
-
 import 'package:bento_challenge/ui/components/models/carousel_banner_item.dart';
 import 'package:bento_challenge/ui/components/button_image.dart';
 import 'package:bento_challenge/ui/components/category_button.dart';
 import 'package:bento_challenge/ui/components/carousel_banner.dart';
 import 'package:bento_challenge/ui/components/product_card.dart';
+import 'package:bento_challenge/ui/product_detail_page.dart';
 
 import 'package:bento_challenge/controller/categories_controller.dart';
 import 'package:bento_challenge/controller/products_controller.dart';
+
+import 'package:bento_challenge/models/category_model.dart';
+import 'package:bento_challenge/models/product_model.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -171,7 +171,6 @@ class _HomePageState extends State<HomePage> {
                     child: BentoTextCaptionDF(
                       'See all',
                       style: TextStyle(
-                        fontSize: 14,
                         color: BentoColor.primary,
                         fontWeight: FontWeight.w700,
                       ),
@@ -179,7 +178,6 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ],
               ),
-              SizedBox(height: BentoSpacing.xxs),
               FutureBuilder<List<ProductModel>>(
                 future: _productsController.getProducts(),
                 builder: (context, snapshot) {
@@ -204,7 +202,7 @@ class _HomePageState extends State<HomePage> {
                     final List<ProductModel> products = snapshot.data!;
 
                     return SizedBox(
-                      height: products.length / 2 * 315,
+                      height: products.length / 2 * 325,
                       child: GridView.builder(
                         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                           crossAxisCount: 2,

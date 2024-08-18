@@ -13,6 +13,7 @@ Map<int, Color> _swatchOpacity = {
   900: const Color.fromRGBO(80, 225, 155, 1),
 };
 
+/// custom colors class
 abstract class BentoColor {
   static MaterialColor primary = MaterialColor(0xFF51E09B, _swatchOpacity);
   static Color secondary = const Color(0xFF0F325A);
