@@ -15,6 +15,11 @@ abstract class _LocalProductsRepository {
 /// This class was created to simulate a data request.
 class ProductsController extends ChangeNotifier implements _LocalProductsRepository {
   late String _id;
+  late double _price;
+  late double _discount;
+
+  double get price => _price;
+  double get discount => _discount;
 
   Future<void> setId(id) async {
     _id = id;
@@ -23,9 +28,16 @@ class ProductsController extends ChangeNotifier implements _LocalProductsReposit
 
   @override
   Future<ProductModel> getProductByID() async {
-    await Future.delayed(Duration(milliseconds: 2100));
+    await Future.delayed(Duration(milliseconds: 2600));
 
-    return products.firstWhere((product) => product.id == _id);
+    ProductModel product = products.firstWhere(
+      (product) => product.id == _id,
+    );
+
+    _price = product.price;
+    _discount = product.discount!;
+
+    return product;
   }
 
   @override
