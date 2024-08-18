@@ -28,9 +28,10 @@ flutter:
     - assets/fonts/
     - assets/images/
     - assets/images/button/
-    - assets/images/carousel/
+    - assets/images/banner/
     - assets/images/categories/
     - assets/images/products/
+    - assets/images/specifications/
     
   fonts:
     - family: NunitoSans
