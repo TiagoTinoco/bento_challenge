@@ -87,22 +87,16 @@ class BentoProductCard extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: BentoSpacing.xxxs),
-                Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    BentoPrice(
-                      price: price,
-                      discount: discount!,
-                    ),
-                    Spacer(),
-                    BentoButton(
-                      title: 'See',
-                      width: 65,
-                      height: 30,
-                      borderRadius: 10,
-                      onPressed: onPressed,
-                    ),
-                  ],
+                BentoPrice(
+                  price: price,
+                  discount: discount!,
+                ),
+                SizedBox(height: BentoSpacing.xxxxs),
+                BentoButton(
+                  title: 'See',
+                  height: 30,
+                  borderRadius: 10,
+                  onPressed: onPressed,
                 ),
               ],
             ),
@@ -123,29 +117,32 @@ class BentoProductCardSkeleton extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Shimmer.fromColors(
-            baseColor: Color(0xFFF5F5F5),
-            highlightColor: Colors.white,
-            child: Container(
-              width: 183,
-              height: 263,
-              padding: EdgeInsets.all(10),
-              decoration: BoxDecoration(
-                color: Color(0xFFF5F5F5),
-                borderRadius: BorderRadius.circular(10),
+          Expanded(
+            child: Shimmer.fromColors(
+              baseColor: Color(0xFFF5F5F5),
+              highlightColor: Colors.white,
+              child: Container(
+                height: 297,
+                padding: EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                  color: Color(0xFFF5F5F5),
+                  borderRadius: BorderRadius.circular(10),
+                ),
               ),
             ),
           ),
-          Shimmer.fromColors(
-            baseColor: Color(0xFFF5F5F5),
-            highlightColor: Colors.white,
-            child: Container(
-              width: 183,
-              height: 263,
-              padding: EdgeInsets.all(10),
-              decoration: BoxDecoration(
-                color: Color(0xFFF5F5F5),
-                borderRadius: BorderRadius.circular(10),
+          SizedBox(width: 10),
+          Expanded(
+            child: Shimmer.fromColors(
+              baseColor: Color(0xFFF5F5F5),
+              highlightColor: Colors.white,
+              child: Container(
+                height: 297,
+                padding: EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                  color: Color(0xFFF5F5F5),
+                  borderRadius: BorderRadius.circular(10),
+                ),
               ),
             ),
           ),

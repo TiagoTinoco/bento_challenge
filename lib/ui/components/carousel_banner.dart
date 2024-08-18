@@ -35,7 +35,7 @@ class _BentoCarouselBannerState extends State<BentoCarouselBanner> {
 
   void _startAutoScroll() {
     _timer = Timer.periodic(Duration(milliseconds: 4500), (timer) {
-      _currentPage = (_currentPage + 1) % widget.pages.length;
+      _currentPage = (_currentPage + 1) % pages.length;
 
       _pageController.animateToPage(
         _currentPage,
@@ -110,7 +110,7 @@ class _BentoCarouselBannerState extends State<BentoCarouselBanner> {
                           ),
                         ),
                         Image.asset(
-                          'assets/images/carousel/${pages[index].imagePath}',
+                          'assets/images/banner/${pages[index].imagePath}',
                           fit: BoxFit.contain,
                           width: 130,
                           height: 130,
