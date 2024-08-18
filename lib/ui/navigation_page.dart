@@ -77,7 +77,7 @@ class _NavigationPageState extends State<NavigationPage> with SingleTickerProvid
                     fontWeight: FontWeight.w700,
                   ),
                 ),
-                const BentoDropdown(),
+                BentoDropdown(),
               ],
             ),
             actions: [

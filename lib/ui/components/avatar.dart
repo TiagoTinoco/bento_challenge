@@ -26,8 +26,13 @@ class BentoAvatar extends StatelessWidget {
           width: radius * 3.7,
           decoration: BoxDecoration(color: BentoColor.primary.shade300),
           child: Align(
-            child: SizedBox(
-              width: double.maxFinite,
+            child: Padding(
+              padding: EdgeInsets.only(
+                top: 4,
+                left: 9,
+                right: 6,
+                bottom: 6,
+              ),
               child: Image.asset(
                 'assets/images/$imagePath',
                 fit: BoxFit.cover,

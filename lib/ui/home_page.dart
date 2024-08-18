@@ -84,7 +84,7 @@ class _HomePageState extends State<HomePage> {
             ],
           ),
         ),
-        SizedBox(height: BentoSpacing.xs),
+        SizedBox(height: BentoSpacing.sm),
         BentoCarouselBanner(pages: bannerItems),
         SizedBox(height: BentoSpacing.sm),
         Padding(
