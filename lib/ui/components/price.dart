@@ -9,10 +9,16 @@ class BentoPrice extends StatelessWidget {
     super.key,
     required this.price,
     required this.discount,
+    this.fontsizeTitle = 10,
+    this.fontsizePrice = 16,
+    this.fontsizeDiscount = 10,
   });
 
   final double price;
   final double discount;
+  final double? fontsizeTitle;
+  final double? fontsizePrice;
+  final double? fontsizeDiscount;
 
   @override
   Widget build(BuildContext context) {
@@ -21,32 +27,34 @@ class BentoPrice extends StatelessWidget {
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisAlignment: MainAxisAlignment.end,
       children: [
         BentoTextCaptionDF(
           'Price',
           style: TextStyle(
-            fontSize: 10,
-            color: Color(0xFFBEBEBE),
-            fontWeight: FontWeight.w600,
+            fontSize: fontsizeTitle,
+            color: Color(0xFFBBBBBB),
+            fontWeight: FontWeight.w400,
           ),
         ),
         Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             BentoTextBodyDF(
-              discount != 0 ? '\$$discountFormatted' : '\$$priceFormatted',
+              discount > 0 ? '\$$discountFormatted' : '\$$priceFormatted',
               style: TextStyle(
+                fontSize: fontsizePrice,
                 color: BentoColor.secondary,
                 fontWeight: FontWeight.w900,
               ),
             ),
-            SizedBox(width: BentoSpacing.xxxxs),
+            SizedBox(width: BentoSpacing.xxxs),
             Visibility(
-              visible: discount != 0,
+              visible: discount > 0,
               child: BentoTextCaptionDF(
                 '\$$priceFormatted',
                 style: TextStyle(
-                  fontSize: 10,
+                  fontSize: fontsizeDiscount,
                   color: Color(0xFFC8D0D9),
                   fontWeight: FontWeight.w600,
                   decoration: TextDecoration.lineThrough,
