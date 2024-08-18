@@ -1,3 +1,4 @@
+import 'package:bento_challenge/ui/product_detail_page.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -58,10 +59,6 @@ class _HomePageState extends State<HomePage> {
       onPressed: () {},
     ),
   ];
-
-  Future<void> productSelected(String productID) async {
-    await _productsController.setId(productID);
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -182,7 +179,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ],
               ),
-              SizedBox(height: BentoSpacing.xxs),
+              SizedBox(height: BentoSpacing.xxxs),
               FutureBuilder<List<ProductModel>>(
                 future: _productsController.getProducts(),
                 builder: (context, snapshot) {
@@ -207,13 +204,13 @@ class _HomePageState extends State<HomePage> {
                     final List<ProductModel> products = snapshot.data!;
 
                     return SizedBox(
-                      height: products.length / 2 * 290,
+                      height: products.length / 2 * 315,
                       child: GridView.builder(
                         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                           crossAxisCount: 2,
                           crossAxisSpacing: 10.0,
                           mainAxisSpacing: 10.0,
-                          mainAxisExtent: 263,
+                          mainAxisExtent: 297,
                         ),
                         scrollDirection: Axis.vertical,
                         itemCount: products.length,
@@ -226,7 +223,8 @@ class _HomePageState extends State<HomePage> {
                             imagePath: products[index].imagesPath[0],
                             backgroundColor: products[index].backgroundColor,
                             onPressed: () async {
-                              await productSelected(products[index].id);
+                              await _productsController.setId(products[index].id);
+                              Navigator.of(context).pushNamed(ProductDetailPage.routeName);
                             },
                           );
                         },
