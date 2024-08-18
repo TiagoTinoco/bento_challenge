@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'package:bento_challenge/ui/bento_custom/color.dart';
-import 'package:bento_challenge/ui/splash_page.dart';
+
 import 'package:bento_challenge/ui/navigation_page.dart';
-import 'package:bento_challenge/ui/home/home_page.dart';
-import 'package:bento_challenge/ui/item_detail/item_detail_page.dart';
+import 'package:bento_challenge/ui/splash_page.dart';
+import 'package:bento_challenge/ui/home_page.dart';
+import 'package:bento_challenge/ui/product_detail_page.dart';
 
 import 'package:bento_challenge/controller/categories_controller.dart';
 import 'package:bento_challenge/controller/products_controller.dart';
@@ -37,7 +38,7 @@ class BentoChallenge extends StatelessWidget {
           SplashPage.routeName: (_) => const SplashPage(),
           NavigationPage.routeName: (_) => const NavigationPage(),
           HomePage.routeName: (_) => const HomePage(),
-          ItemDetailPage.routeName: (_) => const ItemDetailPage(),
+          ProductDetailPage.routeName: (_) => const ProductDetailPage(),
         },
         debugShowCheckedModeBanner: false,
       ),
