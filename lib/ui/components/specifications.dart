@@ -35,7 +35,7 @@ class BentoSpecifications extends StatelessWidget {
             fit: BoxFit.contain,
           ),
         ),
-        SizedBox(height: BentoSpacing.xxxs),
+        SizedBox(height: BentoSpacing.xxs),
         BentoTextCaptionDF(
           title,
           maxLines: 1,

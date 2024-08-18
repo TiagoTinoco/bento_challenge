@@ -4,7 +4,6 @@ import 'package:provider/provider.dart';
 import 'package:bento_challenge/ui/bento_custom/color.dart';
 
 import 'package:bento_challenge/ui/navigation_page.dart';
-import 'package:bento_challenge/ui/splash_page.dart';
 import 'package:bento_challenge/ui/home_page.dart';
 import 'package:bento_challenge/ui/product_detail_page.dart';
 
@@ -35,7 +34,6 @@ class BentoChallenge extends StatelessWidget {
           scaffoldBackgroundColor: const Color(0xFFFFFFFF),
         ),
         routes: {
-          SplashPage.routeName: (_) => const SplashPage(),
           NavigationPage.routeName: (_) => const NavigationPage(),
           HomePage.routeName: (_) => const HomePage(),
           ProductDetailPage.routeName: (_) => const ProductDetailPage(),

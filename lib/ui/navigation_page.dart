@@ -63,7 +63,7 @@ class _NavigationPageState extends State<NavigationPage> with SingleTickerProvid
       body: CustomScrollView(
         slivers: [
           SliverAppBar(
-            titleSpacing: BentoSpacing.xs,
+            titleSpacing: BentoSpacing.sm,
             toolbarHeight: 100,
             backgroundColor: const Color(0xFFFFFFFF),
             automaticallyImplyLeading: false,

@@ -44,7 +44,7 @@ class _ButtonImageState extends State<ButtonImage> {
           child: Stack(
             children: [
               Padding(
-                padding: EdgeInsets.only(left: BentoSpacing.xs),
+                padding: EdgeInsets.only(left: BentoSpacing.sm),
                 child: SizedBox(
                   width: 70,
                   child: Center(

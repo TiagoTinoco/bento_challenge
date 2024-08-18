@@ -45,7 +45,7 @@ class _BentoCarouselProductState extends State<BentoCarouselProduct> {
             ),
           ),
           Padding(
-            padding: EdgeInsets.only(top: BentoSpacing.md, bottom: 8),
+            padding: EdgeInsets.only(top: BentoSpacing.lg, bottom: 8),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: List.generate(imagesPath.length, (index) {

@@ -66,7 +66,7 @@ class _HomePageState extends State<HomePage> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: BentoSpacing.xs),
+          padding: EdgeInsets.symmetric(horizontal: BentoSpacing.sm),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -75,7 +75,7 @@ class _HomePageState extends State<HomePage> {
                 imagePath: 'food-bag.png',
                 onPressed: () {},
               ),
-              SizedBox(width: BentoSpacing.xxxs),
+              SizedBox(width: BentoSpacing.xxs),
               ButtonImage(
                 title: 'LOCAL SHOP',
                 imagePath: 'store.png',
@@ -84,11 +84,11 @@ class _HomePageState extends State<HomePage> {
             ],
           ),
         ),
-        SizedBox(height: BentoSpacing.xxs),
-        BentoCarouselBanner(pages: bannerItems),
         SizedBox(height: BentoSpacing.xs),
+        BentoCarouselBanner(pages: bannerItems),
+        SizedBox(height: BentoSpacing.sm),
         Padding(
-          padding: EdgeInsets.only(left: BentoSpacing.xs),
+          padding: EdgeInsets.only(left: BentoSpacing.sm),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -99,7 +99,7 @@ class _HomePageState extends State<HomePage> {
                   fontWeight: FontWeight.w900,
                 ),
               ),
-              SizedBox(height: BentoSpacing.xxs),
+              SizedBox(height: BentoSpacing.xs),
               FutureBuilder<List<CategoryModel>>(
                 future: _categoriesController.getCategories(),
                 builder: (context, snapshot) {
@@ -148,8 +148,8 @@ class _HomePageState extends State<HomePage> {
         Padding(
           padding: EdgeInsets.only(
             top: 25,
-            left: BentoSpacing.xs,
-            right: BentoSpacing.xs,
+            left: BentoSpacing.sm,
+            right: BentoSpacing.sm,
             bottom: 30,
           ),
           child: Column(
@@ -179,7 +179,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ],
               ),
-              SizedBox(height: BentoSpacing.xxxs),
+              SizedBox(height: BentoSpacing.xxs),
               FutureBuilder<List<ProductModel>>(
                 future: _productsController.getProducts(),
                 builder: (context, snapshot) {

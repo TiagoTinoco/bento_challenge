@@ -66,7 +66,7 @@ class BentoProductCard extends StatelessWidget {
             width: 120,
             height: 120,
           ),
-          SizedBox(height: BentoSpacing.xxs),
+          SizedBox(height: BentoSpacing.xs),
           Container(
             width: double.maxFinite,
             padding: EdgeInsets.all(8),
@@ -86,12 +86,12 @@ class BentoProductCard extends StatelessWidget {
                     fontWeight: FontWeight.w700,
                   ),
                 ),
-                SizedBox(height: BentoSpacing.xxxs),
+                SizedBox(height: BentoSpacing.xxs),
                 BentoPrice(
                   price: price,
                   discount: discount!,
                 ),
-                SizedBox(height: BentoSpacing.xxxxs),
+                SizedBox(height: BentoSpacing.xxxs),
                 BentoButton(
                   title: 'See',
                   height: 30,

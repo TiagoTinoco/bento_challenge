@@ -1,14 +1,21 @@
 import 'package:flutter/material.dart';
 
+import 'package:bento_challenge/ui/bento_custom/color.dart';
+import 'package:bento_challenge/ui/bento_custom/text.dart';
+
 class CartPage extends StatelessWidget {
   const CartPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: double.maxFinite,
-      height: 100,
-      color: Colors.purple,
+    return Center(
+      child: BentoTextBodyDF(
+        "I didn't have time to make this page 😕",
+        style: TextStyle(
+          color: BentoColor.secondary,
+          fontWeight: FontWeight.w600,
+        ),
+      ),
     );
   }
 }

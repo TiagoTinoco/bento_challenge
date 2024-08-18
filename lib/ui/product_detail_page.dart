@@ -74,9 +74,9 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                       BentoCarouselProduct(
                         imagesPath: _product.imagesPath,
                       ),
-                      SizedBox(height: BentoSpacing.sm),
+                      SizedBox(height: BentoSpacing.md),
                       Padding(
-                        padding: EdgeInsets.symmetric(horizontal: BentoSpacing.xs),
+                        padding: EdgeInsets.symmetric(horizontal: BentoSpacing.sm),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -90,7 +90,6 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                     maxLines: 2,
                                     overflow: TextOverflow.ellipsis,
                                     style: TextStyle(
-                                      fontSize: 24,
                                       color: BentoColor.secondary,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -129,7 +128,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                 ),
                               ],
                             ),
-                            SizedBox(height: BentoSpacing.xxxs),
+                            SizedBox(height: BentoSpacing.xxs),
                             BentoTextCaptionDF(
                               'Shop: ${_product.storeName}',
                               style: TextStyle(
@@ -138,7 +137,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                 color: BentoColor.secondary.withOpacity(0.75),
                               ),
                             ),
-                            SizedBox(height: BentoSpacing.xxs),
+                            SizedBox(height: BentoSpacing.xs),
                             Container(
                               width: double.maxFinite,
                               height: 90,
@@ -159,16 +158,15 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                 }).toList(),
                               ),
                             ),
-                            SizedBox(height: BentoSpacing.xs),
+                            SizedBox(height: BentoSpacing.sm),
                             BentoTextSubtitle(
                               'Details',
                               style: TextStyle(
-                                fontSize: 18,
                                 color: BentoColor.secondary,
-                                fontWeight: FontWeight.bold,
+                                fontWeight: FontWeight.w900,
                               ),
                             ),
-                            SizedBox(height: BentoSpacing.xxxxs),
+                            SizedBox(height: BentoSpacing.xxxs),
                             BentoTextBodyDF(
                               _product.description,
                               style: TextStyle(
@@ -177,7 +175,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                 color: BentoColor.secondary.withOpacity(0.80),
                               ),
                             ),
-                            SizedBox(height: BentoSpacing.xxxs),
+                            SizedBox(height: BentoSpacing.xxs),
                           ],
                         ),
                       ),
@@ -192,9 +190,9 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
               width: double.maxFinite,
               height: 90,
               padding: EdgeInsets.only(
-                left: BentoSpacing.xs,
-                right: BentoSpacing.xs,
-                bottom: BentoSpacing.xs,
+                left: BentoSpacing.sm,
+                right: BentoSpacing.sm,
+                bottom: BentoSpacing.sm,
               ),
               decoration: BoxDecoration(
                 color: Color(0xFFFFFFFF),
@@ -216,7 +214,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                     fontsizePrice: 28,
                     fontsizeDiscount: 15,
                   ),
-                  SizedBox(width: BentoSpacing.sm),
+                  SizedBox(width: BentoSpacing.md),
                   Expanded(
                     child: Padding(
                       padding: const EdgeInsets.only(bottom: 6),
@@ -252,9 +250,9 @@ class ProductDetailSkeleton extends StatelessWidget {
             ),
           ),
         ),
-        SizedBox(height: BentoSpacing.sm),
+        SizedBox(height: BentoSpacing.md),
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: BentoSpacing.xs),
+          padding: EdgeInsets.symmetric(horizontal: BentoSpacing.sm),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -275,7 +273,7 @@ class ProductDetailSkeleton extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(width: BentoSpacing.xxs),
+                  SizedBox(width: BentoSpacing.xs),
                   Shimmer.fromColors(
                     baseColor: Color(0xFFF5F5F5),
                     highlightColor: Colors.white,
@@ -291,7 +289,7 @@ class ProductDetailSkeleton extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: BentoSpacing.xxxxs),
+              SizedBox(height: BentoSpacing.xxxs),
               Shimmer.fromColors(
                 baseColor: Color(0xFFF5F5F5),
                 highlightColor: Colors.white,
@@ -303,7 +301,7 @@ class ProductDetailSkeleton extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: BentoSpacing.xxs),
+              SizedBox(height: BentoSpacing.xs),
               Shimmer.fromColors(
                 baseColor: Color(0xFFF5F5F5),
                 highlightColor: Colors.white,
@@ -317,7 +315,7 @@ class ProductDetailSkeleton extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: BentoSpacing.xs),
+              SizedBox(height: BentoSpacing.sm),
               Shimmer.fromColors(
                 baseColor: Color(0xFFF5F5F5),
                 highlightColor: Colors.white,
@@ -329,43 +327,7 @@ class ProductDetailSkeleton extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: BentoSpacing.xxxxs),
-              Shimmer.fromColors(
-                baseColor: Color(0xFFF5F5F5),
-                highlightColor: Colors.white,
-                child: Container(
-                  width: double.maxFinite,
-                  height: 15,
-                  decoration: BoxDecoration(
-                    color: Color(0xFFFFFFFF),
-                  ),
-                ),
-              ),
-              SizedBox(height: BentoSpacing.xxxxs),
-              Shimmer.fromColors(
-                baseColor: Color(0xFFF5F5F5),
-                highlightColor: Colors.white,
-                child: Container(
-                  width: double.maxFinite,
-                  height: 15,
-                  decoration: BoxDecoration(
-                    color: Color(0xFFFFFFFF),
-                  ),
-                ),
-              ),
-              SizedBox(height: BentoSpacing.xxxxs),
-              Shimmer.fromColors(
-                baseColor: Color(0xFFF5F5F5),
-                highlightColor: Colors.white,
-                child: Container(
-                  width: double.maxFinite,
-                  height: 15,
-                  decoration: BoxDecoration(
-                    color: Color(0xFFFFFFFF),
-                  ),
-                ),
-              ),
-              SizedBox(height: BentoSpacing.xxxxs),
+              SizedBox(height: BentoSpacing.xxxs),
               Shimmer.fromColors(
                 baseColor: Color(0xFFF5F5F5),
                 highlightColor: Colors.white,
@@ -378,6 +340,42 @@ class ProductDetailSkeleton extends StatelessWidget {
                 ),
               ),
               SizedBox(height: BentoSpacing.xxxs),
+              Shimmer.fromColors(
+                baseColor: Color(0xFFF5F5F5),
+                highlightColor: Colors.white,
+                child: Container(
+                  width: double.maxFinite,
+                  height: 15,
+                  decoration: BoxDecoration(
+                    color: Color(0xFFFFFFFF),
+                  ),
+                ),
+              ),
+              SizedBox(height: BentoSpacing.xxxs),
+              Shimmer.fromColors(
+                baseColor: Color(0xFFF5F5F5),
+                highlightColor: Colors.white,
+                child: Container(
+                  width: double.maxFinite,
+                  height: 15,
+                  decoration: BoxDecoration(
+                    color: Color(0xFFFFFFFF),
+                  ),
+                ),
+              ),
+              SizedBox(height: BentoSpacing.xxxs),
+              Shimmer.fromColors(
+                baseColor: Color(0xFFF5F5F5),
+                highlightColor: Colors.white,
+                child: Container(
+                  width: double.maxFinite,
+                  height: 15,
+                  decoration: BoxDecoration(
+                    color: Color(0xFFFFFFFF),
+                  ),
+                ),
+              ),
+              SizedBox(height: BentoSpacing.xxs),
             ],
           ),
         ),
@@ -398,9 +396,9 @@ class BottomNavigationSkeleton extends StatelessWidget {
         width: double.maxFinite,
         height: 90,
         padding: EdgeInsets.only(
-          left: BentoSpacing.xs,
-          right: BentoSpacing.xs,
-          bottom: BentoSpacing.xs,
+          left: BentoSpacing.sm,
+          right: BentoSpacing.sm,
+          bottom: BentoSpacing.sm,
         ),
         decoration: BoxDecoration(
           color: Color(0xFFFFFFFF),

@@ -48,7 +48,7 @@ class BentoPrice extends StatelessWidget {
                 fontWeight: FontWeight.w900,
               ),
             ),
-            SizedBox(width: BentoSpacing.xxxs),
+            SizedBox(width: BentoSpacing.xxs),
             Visibility(
               visible: discount > 0,
               child: BentoTextCaptionDF(
