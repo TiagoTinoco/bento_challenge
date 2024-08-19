@@ -121,7 +121,7 @@ class BentoProductCardSkeleton extends StatelessWidget {
               baseColor: Color(0xFFF5F5F5),
               highlightColor: Colors.white,
               child: Container(
-                height: 297,
+                height: 288,
                 padding: EdgeInsets.all(10),
                 decoration: BoxDecoration(
                   color: Color(0xFFF5F5F5),
@@ -136,7 +136,7 @@ class BentoProductCardSkeleton extends StatelessWidget {
               baseColor: Color(0xFFF5F5F5),
               highlightColor: Colors.white,
               child: Container(
-                height: 297,
+                height: 288,
                 padding: EdgeInsets.all(10),
                 decoration: BoxDecoration(
                   color: Color(0xFFF5F5F5),

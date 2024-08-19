@@ -28,6 +28,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
   late final _productsController = context.read<ProductsController>();
   late final ProductModel _product;
   bool _isLoading = true;
+  bool _isFavorite = false;
 
   @override
   void initState() {
@@ -54,13 +55,17 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
             leading: Center(
               child: BentoIconButton(
                 icon: Icons.arrow_back_ios_rounded,
+                iconColor: BentoColor.secondary,
+                backgroundColor: BentoColor.grey,
                 onPressed: () => Navigator.of(context).pop(),
               ),
             ),
             actions: [
               BentoIconButton(
-                icon: Icons.favorite_outline,
-                onPressed: () {},
+                icon: _isFavorite ? Icons.favorite_outlined : Icons.favorite_outline,
+                iconColor: _isFavorite ? BentoColor.red : BentoColor.secondary,
+                backgroundColor: _isFavorite ? BentoColor.red.withOpacity(0.1) : BentoColor.grey,
+                onPressed: () => setState(() => _isFavorite = !_isFavorite),
               ),
               SizedBox(width: 8),
             ],

@@ -208,7 +208,7 @@ class _HomePageState extends State<HomePage> {
                           crossAxisCount: 2,
                           crossAxisSpacing: 10.0,
                           mainAxisSpacing: 10.0,
-                          mainAxisExtent: 297,
+                          mainAxisExtent: 288,
                         ),
                         scrollDirection: Axis.vertical,
                         itemCount: products.length,

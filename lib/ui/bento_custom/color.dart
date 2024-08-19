@@ -20,4 +20,5 @@ abstract class BentoColor {
   static Color darkGreen = const Color(0xFFAAD4C3);
   static Color grey = const Color(0xFFF5F5F5);
   static Color yellow = const Color(0xFFFABE1F);
+  static Color red = const Color(0xFFEE2B2B);
 }
