@@ -1,7 +1,7 @@
-import 'package:bento_challenge/ui/bento_custom/spacing.dart';
 import 'package:flutter/material.dart';
 
 import 'package:bento_challenge/ui/bento_custom/color.dart';
+import 'package:bento_challenge/ui/bento_custom/spacing.dart';
 
 class BentoCarouselProduct extends StatefulWidget {
   const BentoCarouselProduct({
@@ -45,7 +45,7 @@ class _BentoCarouselProductState extends State<BentoCarouselProduct> {
             ),
           ),
           Padding(
-            padding: EdgeInsets.only(top: BentoSpacing.md, bottom: 8),
+            padding: EdgeInsets.only(top: BentoSpacing.lg, bottom: 8),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: List.generate(imagesPath.length, (index) {

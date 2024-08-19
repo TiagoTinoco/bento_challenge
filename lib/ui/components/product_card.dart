@@ -66,7 +66,7 @@ class BentoProductCard extends StatelessWidget {
             width: 120,
             height: 120,
           ),
-          SizedBox(height: BentoSpacing.xxs),
+          SizedBox(height: BentoSpacing.xs),
           Container(
             width: double.maxFinite,
             padding: EdgeInsets.all(8),
@@ -91,7 +91,6 @@ class BentoProductCard extends StatelessWidget {
                   price: price,
                   discount: discount!,
                 ),
-                SizedBox(height: BentoSpacing.xxxxs),
                 BentoButton(
                   title: 'See',
                   height: 30,
@@ -122,7 +121,7 @@ class BentoProductCardSkeleton extends StatelessWidget {
               baseColor: Color(0xFFF5F5F5),
               highlightColor: Colors.white,
               child: Container(
-                height: 297,
+                height: 288,
                 padding: EdgeInsets.all(10),
                 decoration: BoxDecoration(
                   color: Color(0xFFF5F5F5),
@@ -137,7 +136,7 @@ class BentoProductCardSkeleton extends StatelessWidget {
               baseColor: Color(0xFFF5F5F5),
               highlightColor: Colors.white,
               child: Container(
-                height: 297,
+                height: 288,
                 padding: EdgeInsets.all(10),
                 decoration: BoxDecoration(
                   color: Color(0xFFF5F5F5),

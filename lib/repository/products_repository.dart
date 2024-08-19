@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:bento_challenge/models/product_model.dart';
 import 'package:bento_challenge/models/specification_model.dart';
 
+/// made to represent the data being returned from the backend
 const products = [
   ProductModel(
     id: '#orangefakeid',

@@ -47,7 +47,7 @@ class _BentoCategoryButtonState extends State<BentoCategoryButton> {
               ),
             ),
           ),
-          SizedBox(height: BentoSpacing.xxs / 2),
+          SizedBox(height: BentoSpacing.xs / 2),
           BentoTextCaptionDF(
             widget.name,
             style: TextStyle(

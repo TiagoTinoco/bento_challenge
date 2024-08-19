@@ -1,4 +1,3 @@
-import 'package:bento_challenge/ui/product_detail_page.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -6,17 +5,18 @@ import 'package:bento_challenge/ui/bento_custom/text.dart';
 import 'package:bento_challenge/ui/bento_custom/color.dart';
 import 'package:bento_challenge/ui/bento_custom/spacing.dart';
 
-import 'package:bento_challenge/models/category_model.dart';
-import 'package:bento_challenge/models/product_model.dart';
-
 import 'package:bento_challenge/ui/components/models/carousel_banner_item.dart';
 import 'package:bento_challenge/ui/components/button_image.dart';
 import 'package:bento_challenge/ui/components/category_button.dart';
 import 'package:bento_challenge/ui/components/carousel_banner.dart';
 import 'package:bento_challenge/ui/components/product_card.dart';
+import 'package:bento_challenge/ui/product_detail_page.dart';
 
 import 'package:bento_challenge/controller/categories_controller.dart';
 import 'package:bento_challenge/controller/products_controller.dart';
+
+import 'package:bento_challenge/models/category_model.dart';
+import 'package:bento_challenge/models/product_model.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -66,7 +66,7 @@ class _HomePageState extends State<HomePage> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: BentoSpacing.xs),
+          padding: EdgeInsets.symmetric(horizontal: BentoSpacing.sm),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -75,7 +75,7 @@ class _HomePageState extends State<HomePage> {
                 imagePath: 'food-bag.png',
                 onPressed: () {},
               ),
-              SizedBox(width: BentoSpacing.xxxs),
+              SizedBox(width: BentoSpacing.xxs),
               ButtonImage(
                 title: 'LOCAL SHOP',
                 imagePath: 'store.png',
@@ -84,11 +84,11 @@ class _HomePageState extends State<HomePage> {
             ],
           ),
         ),
-        SizedBox(height: BentoSpacing.xxs),
+        SizedBox(height: BentoSpacing.sm),
         BentoCarouselBanner(pages: bannerItems),
-        SizedBox(height: BentoSpacing.xs),
+        SizedBox(height: BentoSpacing.sm),
         Padding(
-          padding: EdgeInsets.only(left: BentoSpacing.xs),
+          padding: EdgeInsets.only(left: BentoSpacing.sm),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -99,7 +99,7 @@ class _HomePageState extends State<HomePage> {
                   fontWeight: FontWeight.w900,
                 ),
               ),
-              SizedBox(height: BentoSpacing.xxs),
+              SizedBox(height: BentoSpacing.xs),
               FutureBuilder<List<CategoryModel>>(
                 future: _categoriesController.getCategories(),
                 builder: (context, snapshot) {
@@ -148,8 +148,8 @@ class _HomePageState extends State<HomePage> {
         Padding(
           padding: EdgeInsets.only(
             top: 25,
-            left: BentoSpacing.xs,
-            right: BentoSpacing.xs,
+            left: BentoSpacing.sm,
+            right: BentoSpacing.sm,
             bottom: 30,
           ),
           child: Column(
@@ -171,7 +171,6 @@ class _HomePageState extends State<HomePage> {
                     child: BentoTextCaptionDF(
                       'See all',
                       style: TextStyle(
-                        fontSize: 14,
                         color: BentoColor.primary,
                         fontWeight: FontWeight.w700,
                       ),
@@ -179,7 +178,6 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ],
               ),
-              SizedBox(height: BentoSpacing.xxxs),
               FutureBuilder<List<ProductModel>>(
                 future: _productsController.getProducts(),
                 builder: (context, snapshot) {
@@ -204,13 +202,13 @@ class _HomePageState extends State<HomePage> {
                     final List<ProductModel> products = snapshot.data!;
 
                     return SizedBox(
-                      height: products.length / 2 * 315,
+                      height: products.length / 2 * 325,
                       child: GridView.builder(
                         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                           crossAxisCount: 2,
                           crossAxisSpacing: 10.0,
                           mainAxisSpacing: 10.0,
-                          mainAxisExtent: 297,
+                          mainAxisExtent: 288,
                         ),
                         scrollDirection: Axis.vertical,
                         itemCount: products.length,

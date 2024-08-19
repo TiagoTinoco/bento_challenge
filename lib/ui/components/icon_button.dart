@@ -1,31 +1,35 @@
 import 'package:flutter/material.dart';
 
-import 'package:bento_challenge/ui/bento_custom/color.dart';
-
 class BentoIconButton extends StatelessWidget {
   const BentoIconButton({
     super.key,
     required this.icon,
     required this.onPressed,
+    required this.iconColor,
+    required this.backgroundColor,
   });
 
   final IconData icon;
+  final Color iconColor;
+  final Color backgroundColor;
   final VoidCallback onPressed;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onPressed,
-      child: Container(
+      child: AnimatedContainer(
+        duration: Duration(milliseconds: 100),
+        curve: Curves.easeInOut,
         height: 40,
         width: 40,
         decoration: BoxDecoration(
-          color: BentoColor.grey,
+          color: backgroundColor,
           borderRadius: BorderRadius.circular(90),
         ),
         child: Icon(
           icon,
-          color: BentoColor.secondary,
+          color: iconColor,
         ),
       ),
     );

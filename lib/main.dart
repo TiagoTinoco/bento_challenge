@@ -1,17 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 
 import 'package:bento_challenge/ui/bento_custom/color.dart';
 
 import 'package:bento_challenge/ui/navigation_page.dart';
-import 'package:bento_challenge/ui/splash_page.dart';
 import 'package:bento_challenge/ui/home_page.dart';
 import 'package:bento_challenge/ui/product_detail_page.dart';
 
 import 'package:bento_challenge/controller/categories_controller.dart';
 import 'package:bento_challenge/controller/products_controller.dart';
 
-void main() {
+void main() async {
+  WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
+  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
+  await Future.delayed(Duration(milliseconds: 2600));
+  FlutterNativeSplash.remove();
   runApp(const BentoChallenge());
 }
 
@@ -28,6 +32,7 @@ class BentoChallenge extends StatelessWidget {
       child: MaterialApp(
         title: 'Bento Challenge',
         initialRoute: NavigationPage.routeName,
+        debugShowCheckedModeBanner: false,
         theme: ThemeData(
           fontFamily: 'NunitoSans',
           primaryColor: BentoColor.primary,
@@ -35,12 +40,10 @@ class BentoChallenge extends StatelessWidget {
           scaffoldBackgroundColor: const Color(0xFFFFFFFF),
         ),
         routes: {
-          SplashPage.routeName: (_) => const SplashPage(),
           NavigationPage.routeName: (_) => const NavigationPage(),
           HomePage.routeName: (_) => const HomePage(),
           ProductDetailPage.routeName: (_) => const ProductDetailPage(),
         },
-        debugShowCheckedModeBanner: false,
       ),
     );
   }

@@ -10,6 +10,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_native_splash: ^2.4.1
+  flutter_launcher_icons: ^0.13.1
   animated_custom_dropdown: ^3.1.1
   awesome_bottom_bar: ^1.2.4
   cupertino_icons: ^1.0.8
@@ -20,6 +22,30 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^4.0.0
+
+flutter_native_splash:
+  color: "#51E09B"
+  image: assets/images/logo.png
+  android: true
+  ios: true
+  android_12:
+    color: "#51E09B"
+    image: assets/images/logo.png
+    icon_background_color: "#51E09B"
+    icon_background_color_dark: "#51E09B"
+    image_dark: assets/images/logo.png
+
+flutter_icons:
+  android_12:
+    image: assets/images/logo.png
+    color: "#51E09B"
+  android: true
+  ios: true
+  remove_alpha_ios: true
+  image_path: "assets/images/logo.png"
+  adaptive_icon_background: "#51E09B"
+  adaptive_icon_foreground: "assets/images/logo.png"
+  fullscreen: true
 
 flutter:
   uses-material-design: true

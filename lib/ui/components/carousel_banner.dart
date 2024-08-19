@@ -64,7 +64,7 @@ class _BentoCarouselBannerState extends State<BentoCarouselBanner> {
               itemCount: pages.length,
               itemBuilder: (context, index) {
                 return Padding(
-                  padding: EdgeInsets.symmetric(horizontal: BentoSpacing.xs),
+                  padding: EdgeInsets.symmetric(horizontal: BentoSpacing.sm),
                   child: Container(
                     padding: EdgeInsets.all(16),
                     decoration: BoxDecoration(
@@ -88,7 +88,7 @@ class _BentoCarouselBannerState extends State<BentoCarouselBanner> {
                                   fontWeight: FontWeight.w600,
                                 ),
                               ),
-                              SizedBox(height: BentoSpacing.xxxs),
+                              SizedBox(height: BentoSpacing.xxs),
                               BentoTextSubtitle(
                                 pages[index].title,
                                 maxLines: 2,
@@ -98,7 +98,7 @@ class _BentoCarouselBannerState extends State<BentoCarouselBanner> {
                                   fontWeight: FontWeight.w900,
                                 ),
                               ),
-                              SizedBox(height: BentoSpacing.xxs),
+                              SizedBox(height: BentoSpacing.xs),
                               BentoButton(
                                 title: pages[index].buttonTitle,
                                 invertBackgroundColor: pages[index].invertBackgroundColorButton,

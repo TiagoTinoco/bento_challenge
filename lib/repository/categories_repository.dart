@@ -1,5 +1,6 @@
 import 'package:bento_challenge/models/category_model.dart';
 
+/// made to represent the data being returned from the backend
 const categories = [
   CategoryModel(
     id: '#veganfakeid',
